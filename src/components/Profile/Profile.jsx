@@ -2,10 +2,10 @@ import React  from 'react';
 import MyPosts from './MyPosts/myPosts';
 import styles from './Profile.module.css'
 
-const Profile =() =>{
+const Profile =(props) =>{
 
     return (
-      <div className={styles.contect}>
+      <div >
         <div>
         <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_ums6Rp3LJDJZ4ClL81ZAa1x7Jos8YVCdKg&usqp=CAU' />
         </div>

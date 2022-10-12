@@ -1,18 +1,20 @@
 import React  from 'react';
 import styles from './myPosts'
 import Post from './Post/Post';
-const MyPosts =() =>{
+const MyPosts =(props) =>{
 
     return (
       <div>
       my posts
       <div>
         <textarea></textarea>
-        <button>add Post</button>
+        <button>add Post</button>``
       </div>
+      
       <div className={styles.posts}>
-        <Post/>
-       
+        <Post message="Hello"/>
+        <Post message="Bye"/>
+
 
       </div>
     </div>
