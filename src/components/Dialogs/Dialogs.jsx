@@ -1,6 +1,8 @@
 import React from "react"
 import { NavLink } from "react-router-dom";
 import style from './Dialogs.module.css'
+
+
 const DialogItem = (props) =>{
     let path="/messages/" +props.id
     return (
@@ -13,11 +15,11 @@ const DialogItem = (props) =>{
 
     
 }
-const Massage = (props) =>{
+const Message = (props) =>{
     return (
         
-        <div className={style.massage}>
-            {props.massage}
+        <div className={style.Message}>
+            {props.Message}
         </div>
     )
 
@@ -25,18 +27,34 @@ const Massage = (props) =>{
 }
 
 const Dialogs = (props) =>{
+    let dialogData = [
+        {id:1,name:"Alex"},
+        {id:2,name:"Karin"},
+        {id:3,name:"Sveta"},
+    ];
+
+    let messagesData = [
+        {id:1,message:"Hi From Alex"},
+        {id:2,message:"Hi From Karin"},
+        {id:3,message:"Hi From Sveta"},
+
+
+    ];
+
+
     return (
         <div className={style.global}>
             <div className={style.friends}>
-                  <DialogItem name="Alex" id="1" />
-                  <DialogItem name="Karim" id="2" />
-                  <DialogItem name="Sveta" id="3" />
+                  <DialogItem name={dialogData[0].name} id={dialogData[0].id} />
+                  <DialogItem name={dialogData[1].name} id={dialogData[1].id} />
+                  <DialogItem name={dialogData[2].name} id={dialogData[2].id} />
             </div>
 
-            <div className={style.massages}>
-                <Massage massage="hello from alex" />
-                <Massage massage="hello from Karim"  />
-                <Massage massage="hello from Sveta"  />
+            <div className={style.Messages}>
+                <Message Message={messagesData[0].message } />
+                <Message Message={messagesData[1].message } />
+                <Message Message={messagesData[2].message } />
+
             </div>     
         </div>
     )

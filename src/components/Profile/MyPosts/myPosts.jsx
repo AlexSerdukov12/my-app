@@ -3,6 +3,7 @@ import styles from './Myposts.module.css'
 
 import Post from './Post/Post';
 const MyPosts =(props) =>{
+  
 
     return (
       <div className={styles.postBlock}>
@@ -19,8 +20,8 @@ const MyPosts =(props) =>{
       </div>
       
       <div className={styles.posts}>
-        <Post message="Hello"/>
-        <Post message="Bye"/>
+        <Post message="Hello" LikeCount='0'/>
+        <Post message="Bye" LikeCount='5'/>
 
 
       </div>
