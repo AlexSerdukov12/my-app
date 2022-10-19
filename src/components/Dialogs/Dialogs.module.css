@@ -1,0 +1,28 @@
+.global {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    padding: 10px;
+
+}
+.friends a{
+    padding: 10px;
+    color: white;
+    text-decoration:none ;
+}
+.friends a.active{
+    color: gold;
+}
+.friend {
+        padding: 10px;
+}
+.massages{
+    padding: 10px;
+}
+.massage{
+    padding: 10px;
+
+}
+
+
+  
+ 

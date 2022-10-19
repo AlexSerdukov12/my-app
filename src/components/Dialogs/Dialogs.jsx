@@ -2,40 +2,42 @@ import React from "react"
 import { NavLink } from "react-router-dom";
 import style from './Dialogs.module.css'
 const DialogItem = (props) =>{
+    let path="/messages/" +props.id
+    return (
+        <div className={style.friend}>
+            <NavLink to={path }
+            className = { navData => navData.isActive ? style.active : style.friend }>{props.name}</NavLink>
+        </div>
+       
+    )
 
     
 }
+const Massage = (props) =>{
+    return (
+        
+        <div className={style.massage}>
+            {props.massage}
+        </div>
+    )
+
+    
+}
+
 const Dialogs = (props) =>{
     return (
         <div className={style.global}>
             <div className={style.friends}>
-
-            
-                  <div className={style.friend}><NavLink to='/messages/1' 
-                  className = { navData => navData.isActive ? style.active : style.friend }>Alex</NavLink>
-                  </div>
-
-                  <div className={style.friend}><NavLink to='/messages/2' 
-                  className = { navData => navData.isActive ? style.active : style.friend }>Karin</NavLink>
-                  </div>
-
-                  <div className={style.friend}><NavLink to='/messages/3' 
-                  className = { navData => navData.isActive ? style.active : style.friend }>Sveta</NavLink>
-                  </div>
-
+                  <DialogItem name="Alex" id="1" />
+                  <DialogItem name="Karim" id="2" />
+                  <DialogItem name="Sveta" id="3" />
             </div>
+
             <div className={style.massages}>
-                <div className={style.massage}>
-                    Hello
-                </div>
-                <div className={style.massage}>
-                    Bye
-                </div>
-                <div className={style.massage}>
-                    Hello World
-                </div>
-            </div>
-            
+                <Massage massage="hello from alex" />
+                <Massage massage="hello from Karim"  />
+                <Massage massage="hello from Sveta"  />
+            </div>     
         </div>
     )
 

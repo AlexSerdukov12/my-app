@@ -1,5 +1,14 @@
-.contect{
-  grid-area: c;
-  background-color: darkmagenta;
+.postBlock{
+    padding:10px;
+
+}
+.textArea{
+    padding:10px;
+    
+
+}
+
+.button{
+    padding:10px;
 
 }

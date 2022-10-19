@@ -1,0 +1,11 @@
+.profileInfo{
+  padding:10px
+}
+.descriptionBlock{
+  padding:10px;
+  color: yellow;
+}
+img {
+  border-radius: 90%;
+  width: 60px;
+}
