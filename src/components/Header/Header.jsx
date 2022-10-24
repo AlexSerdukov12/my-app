@@ -1,10 +1,12 @@
 import React  from 'react';
 import styles from './Header.module.css'
-const Header =() =>{
+const url = require('../../files/Green Garden.png');
+
+const Header =(props) =>{
 
     return (
         <header className={styles.header}>
-        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6s8SUWJ9Vr681FKY0JlN1ve-CV13jYvEAZQ&usqp=CAU'></img>
+        <img src={url} />
       </header>
     )
 }
